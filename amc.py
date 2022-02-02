@@ -35,6 +35,28 @@ def start(): # start function
 
 
 
+def ch2():
+    try:
+        os.system("clear")
+        ch2 = "welcome to challenge 2 \nIn a company you have to get the path of all the files with pdf extension and type the command (4)"
+        print (ch2)
+        for i in range(1,5):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 4 :
+                if isd != "093906c48bcc2e585f54bed709f22222":
+                    print ("game over !")
+
+                else :
+                    print ("winner")
+                    ch3()
+            if isd == "093906c48bcc2e585f54bed709f22222":
+                print ("you win")
+                ch3()
+                break
+    except:
+        print ("please try again !")
+
+
 
 def ch1():
     # try except for erro handling
