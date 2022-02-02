@@ -37,6 +37,36 @@ def start(): # start function
 
 
 
+def ch6():
+    try:
+        os.system("clear")
+        ch5 = "welcome to challenge 6 \n Which of the following addresses represents the localhost in IPv6? (3)"
+        print (ch5)
+        ch5_ch5 = """
+        A. 0:1
+        B. ::1
+        C. 127:0:1
+        D. :127:0:0:1
+        """
+        print (ch5_ch5)
+
+        for i in range(1,4):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 4 :
+                if isd != "837ec5754f503cfaaee0929fd48974e7":
+                    print ("game over !")
+                else :
+                    print ("winner")
+                    ch7()
+            if isd == "837ec5754f503cfaaee0929fd48974e7":
+                print ("you win")
+                ch7()
+                break
+    except:
+        print ("please try again !")
+
+
+
 
 def ch5():
     try:
