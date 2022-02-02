@@ -37,6 +37,37 @@ def start(): # start function
 
 
 
+def ch7():
+    try:
+        os.system("clear")
+        ch7 = "welcome to challenge 7 \n In a scripting scenario, which command will return the domain name configured for the server?"
+        print (ch7)
+        ch7_ch7 = """
+        A. dnsname
+        B. fqdn
+        C. hostname
+        D. hostname -d
+        """
+        print (ch7_ch7)
+
+        for i in range(1,5):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 4 :
+                if isd != "837ec5754f503cfaaee0929fd48974e7":
+                    print ("game over !")
+                else :
+                    print ("winner")
+                    ch8()
+            if isd == "837ec5754f503cfaaee0929fd48974e7":
+                print ("you win")
+                ch8()
+                break
+    except:
+        print ("please try again !")
+
+
+
+
 def ch6():
     try:
         os.system("clear")
