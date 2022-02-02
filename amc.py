@@ -36,6 +36,39 @@ def start(): # start function
 
 
 
+
+
+
+def ch9():
+    try:
+        os.system("clear")
+        ch9 = "welcome to challenge 9 \n Within which file should you place public keys for servers from which you will accept key-based ssh authentication?"
+        print (ch9)
+
+        ch9_ch9 = """
+        A. ~/.ssh/authorized_keys
+        B. ~/.ssh/keys
+        C. ~/.ssh/keyauth
+        D. ~/.sshd/authkeys
+        """
+
+        print (ch9_ch9)
+        for i in range(1,5):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 4 :
+                if isd != "f1290186a5d0b1ceab27f4e77c0c5d68":
+                    print ("game over !")
+                else :
+                    print ("winner")
+                    ch10()
+            if isd == "f1290186a5d0b1ceab27f4e77c0c5d68":
+                print ("you win")
+                ch10()
+                break
+    except:
+        print ("please try again !")
+
+
 def ch8():
     try:
 
