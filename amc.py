@@ -34,6 +34,37 @@ def start(): # start function
         print ("please run again")
 
 
+
+def ch4():
+    try:
+        os.system("clear")
+        ch4 = "welcome to challenge 4 \n Which of the following commands queries the mail servers for the domain example.com ?"
+        print (ch4)
+        ch4_ch4 = """
+        A. dig example.com mx
+        B. dig example.com
+        C. host -t smtp example.com
+        D. dig example.com smtp
+        """
+        print (ch4_ch4)
+
+        for i in range(1,5):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 4 :
+                if isd != "c5a9b309744c165d140cb3d66a872da0":
+                    print ("game over !")
+                else :
+                    print ("winner")
+                    ch5()
+            if isd == "c5a9b309744c165d140cb3d66a872da0":
+                print ("you win")
+                ch5()
+                break
+    except:
+        print ("please try again !")
+
+
+
 def ch3():
     try: 
         os.system("clear")
