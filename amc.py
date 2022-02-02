@@ -36,6 +36,37 @@ def start(): # start function
 
 
 
+def ch8():
+    try:
+
+        os.system("clear")
+        ch8 = "welcome to challenge 8 \n You need to examine who is currently logged in to the system. Which of the following commands will display this information?"
+        print (ch8)
+        
+        ch8_ch8 = """
+        A. listuser
+        B. fuser
+        C. ls -u
+        D. w
+        """
+
+        print (ch8_ch8)
+        for i in range(1,5):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 4 :
+                if isd != "f1290186a5d0b1ceab27f4e77c0c5d68":
+                    print ("game over !")
+                else :
+                    print ("winner")
+                    ch9()
+            if isd == "f1290186a5d0b1ceab27f4e77c0c5d68":
+                print ("you win")
+                ch9()
+                break
+    except:
+        print ("please try again !")
+
+
 
 def ch7():
     try:
