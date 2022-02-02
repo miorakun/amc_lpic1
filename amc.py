@@ -36,6 +36,42 @@ def start(): # start function
 
 
 
+def ch10():
+    try:
+        os.system("clear")
+        ch10 = "welcome to challenge 10 \n The system on which you are working does not have the lsof command installed, and you are not allowed to install software without going through four levels of approval and scheduling the installation weeks in advance. However, the netstat command is available. Which option to netstat will show the process ID to which a given network port is connected?"
+        print (ch10)
+
+        ch10_ch10 = """
+        A. ~/.ssh/authorized_keys
+        B. ~/.ssh/keys
+        C. ~/.ssh/keyauth
+        D. ~/.sshd/authkeys
+        """
+
+        print (ch10_ch10)
+        for i in range(1,5):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 4 :
+                if isd != "f1290186a5d0b1ceab27f4e77c0c5d68":
+                    sleep(2)
+                    print ("game over !")
+                else :
+                    sleep(2)
+                    print ("winner")
+                    print ("Congratulations my friend, I hope you are successful wherever you are ")
+
+            if isd == "f1290186a5d0b1ceab27f4e77c0c5d68":
+                sleep(2)
+                print ("you win")
+                break
+    except:
+        sleep(2)
+
+        print ("please try again !")
+
+
+
 
 
 
