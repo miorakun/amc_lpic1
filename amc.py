@@ -34,6 +34,35 @@ def start(): # start function
         print ("please run again")
 
 
+def ch3():
+    try: 
+        os.system("clear")
+        ch3 = " welcome to challenge 3 \n Which command is used to format a swap partition?"
+        print (ch3)
+        ch3_ch3 = """
+        A. mkfs -swap
+        B. mkswap
+        C. format -swap
+        D. mksw
+        """
+        print (ch3_ch3)
+        for i in range(1,4):
+            isd = hashlib.md5(input("%i ~$" % i ).encode()).hexdigest()
+            if i == 3 :
+                if isd != "93939cfda4dbd38c5946fa40989c8c6c":
+                    print ("game over !")
+                
+                else :
+                    print ("winner")
+                    ch4()
+
+            if isd == "93939cfda4dbd38c5946fa40989c8c6c":
+                print ("you win")
+                ch4()
+                break
+    except:
+        print("please try again !") 
+
 
 def ch2():
     try:
