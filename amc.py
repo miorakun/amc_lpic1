@@ -32,3 +32,34 @@ def start(): # start function
             ch1()
     except:
         print ("please run again")
+
+
+
+
+def ch1():
+    # try except for erro handling
+    try:
+        os.system("clear")
+        # ch1 set quastion
+        ch1 = "welcome to challenge 1 \n You are asked to list all the kernel modules and show them to the client # chance number (3)"
+        print (ch1)
+        # for loop and range chancess
+        for i in range(1,4):
+            # isd var is input client hash
+            isd =  hashlib.md5(input("%i ~$" % i).encode()).hexdigest()
+            # if i chance == 3 chance and isd != hash you are game over
+            if i == 3 :
+                if isd != "e44d12d4c5d06e7acfb04b826da858bd":
+                    print ("game over !")
+                # else you win
+                else :
+                    print ("winer")
+                    ch2()
+            # if you win programm is break
+            if isd == "e44d12d4c5d06e7acfb04b826da858bd":
+                print ("you win")
+                ch2()
+    except:
+        print ("please try again")
+
+start()
